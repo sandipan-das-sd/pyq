@@ -1,9 +1,19 @@
-/* Default styles */
+Default styles
+
+/*
+Google Popins font
+
+*/
+
+
+
+
 ----------------------------------------
 ----------------------------------------
 /* Nav links items responsive nes */
 ------------------------------------------
 ------------------------------------------
+
 
 /* For desktop */
 .nav-link {  
@@ -111,3 +121,71 @@
     }
   }
  
+
+ /* 
+--------------------------------------------
+--------------------------------------------
+--------------   Nav links styles----------
+--------------------------------------------
+*/
+
+.navbar-nav .nav-link {
+    position: relative;
+    
+    font-size: 18px; /* Set your desired font size */
+    font-family:'Poppins', sans-serif /* Set your desired font family */
+  }
+  
+  .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .navbar-nav .nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+    background-color: #ff2600; /* underline color */
+  }
+  
+  /* Optional: Add animation to the underline */
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff1e00; /* underline color */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  /* For mobile devices */
+@media (max-width: 767px) {
+    .navbar-nav .nav-link::before,
+    .navbar-nav .nav-link::after {
+      width: 25%; 
+      left: 1% ;
+    }
+  }
+/* Add shadow effect on hover */
+.navbar-nav .nav-link:hover {
+    border-radius: 10px; /* Set your desired border radius for rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adjust shadow effect */
+    background: linear-gradient(180deg, #f3d664, #ee6f59); /* Gradient from yellow to red */
+    color: #333; /* Text color for readability */
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+}
