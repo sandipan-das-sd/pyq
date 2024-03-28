@@ -29,13 +29,13 @@ export default function Header() {
                 <Link className="nav-link" to="/test">Test Series</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/practice">Practice</Link>
+                <Link className="nav-link" to="/practice">Carriers</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/answer-writing">Answer Writing</Link>
+                <Link className="nav-link" to="/answer-writing">About Us </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About us</Link>
+                <Link className="nav-link" to="/about"> Contact us</Link>
               </li>
             </ul>
             <a href="login.html" className="btn btn-primary ms-lg-3" id="nav-btn"> <span style={{ marginRight: '5px' }}><i className="fa fa-user-circle-o" aria-hidden="true"></i></span>
@@ -49,7 +49,7 @@ export default function Header() {
               32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 
               53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/
               
-                ></svg>
+              ></svg>
             </span>Login</a>
           </div>
         </div>
