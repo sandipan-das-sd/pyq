@@ -1,0 +1,113 @@
+/* Default styles */
+----------------------------------------
+----------------------------------------
+/* Nav links items responsive nes */
+------------------------------------------
+------------------------------------------
+
+/* For desktop */
+.nav-link {  
+    margin: 20px;
+}
+
+/* Adjust spacing for medium and larger screens */
+@media (min-width: 768px) {
+    .navbar-brand {
+        margin-right: 1rem; /* Reduce margin between logo and navigation links */
+    }
+
+    .nav-link {
+        margin-right: 0.5rem; /* Reduce margin between navigation links */
+    }
+    #nav-btn {
+        margin-left: 0.2rem;
+        
+    }
+}
+
+/* Adjust padding for larger screens */
+@media (min-width: 992px) {
+    .nav-item:last-child .nav-link {
+        padding-right: 2rem; /* Add padding to the last navigation link */
+    }
+}
+
+/* Adjust spacing for extra-large screens */
+@media (min-width: 1200px) {
+    .navbar-brand {
+        margin-right: 2rem; /* Increase margin between logo and navigation links */
+    }
+}
+
+/* Adjust spacing for small and extra-small screens */
+@media (max-width: 767px) {
+    .nav-link {
+        margin-right: 0; /* Set margin to 0 for mobile and tablet screens */
+        margin: 0px;
+    }
+    #nav-btn {
+        margin-left: 0.2rem; /* Adjust margin for login button */
+        margin: 5px; /* Adjust margin for smaller devices */
+        padding: 8px 20px; /* Adjust padding for smaller devices */
+        font-size: 18px; /* Adjust font size for smaller devices */
+    }
+}
+
+/* Force navigation links to display in a single line for larger screens */
+@media (min-width: 990px) {
+    .navbar-nav {
+        flex-wrap: nowrap; /* Prevent navigation links from wrapping onto multiple lines */
+    }
+    .nav-item {
+        white-space: nowrap; /* Prevent navigation items from wrapping onto multiple lines */
+    }
+    #nav-btn {
+        margin-left: 0.5rem; /* Adjust margin for login button */
+    }
+}
+
+#nav-btn {
+    color: #0f2460;
+    border: 2px solid #7693e3;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    padding: 5px 25px;
+    font-size: 22px;
+    font-weight: bold; /* Use font-weight property for bold text */
+    text-decoration: none;
+}
+
+#nav-btn:hover {
+    color: red;
+    background-color: #e3f304;
+}
+
+#nav-btn:clicked {
+    background-color: #04dbf3;
+}
+
+/* ----------------------------------------
+----------------------------------------
+/* Logo Responsive */
+------------------------------------------
+------------------------------------------ */
+.logo {
+    height: auto;
+    width: 100%; /* Ensure the logo takes up 100% width of its container */
+  }
+  
+  /* Adjust logo size for larger screens */
+  @media (min-width: 768px) {
+    .logo {
+        
+      max-width: 200px; /* Set maximum width for the logo */
+    }
+  }
+  
+  /* Adjust logo size for extra-large screens */
+  @media (min-width: 1200px) {
+    .logo {
+      max-width: 300px; /* Set larger maximum width for the logo */
+    }
+  }
+ 
