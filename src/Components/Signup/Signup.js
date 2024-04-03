@@ -9,11 +9,21 @@ const Signup = () => {
         lastname: "",
         email: "",
         password: "",
+        confirmPassword: "",
+        userType: "visitor", // Default user type
     });
+    const [error, setError] = useState("");
     const history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        // Password validation, additional validations can be added
+        if (data.password !== data.confirmPassword) {
+            setError("Passwords do not match");
+            return;
+        }
+
         try {
             const response = await axios.post('http://localhost:8001/register', data);
             console.log(response.data);
@@ -21,7 +31,7 @@ const Signup = () => {
             history.push('/login');
         } catch (error) {
             console.error("Error:", error.message);
-            alert("Registration failed. Please try again.");
+            setError("Registration failed. Please try again.");
         }
     };
 
@@ -79,10 +89,29 @@ const Signup = () => {
                             required
                             className={styles.input}
                         />
+                        <input
+                            type="password"
+                            placeholder="Confirm Password"
+                            name="confirmPassword"
+                            onChange={handleChange}
+                            value={data.confirmPassword}
+                            required
+                            className={styles.input}
+                        />
+                        <select
+                            name="userType"
+                            value={data.userType}
+                            onChange={handleChange}
+                            className={styles.input}
+                        >
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
                         <button type="submit" className={styles.green_btn}>
                             Sign Up
                         </button>
                     </form>
+                    {error && <p className={styles.error}>{error}</p>}
                 </div>
             </div>
         </div>
