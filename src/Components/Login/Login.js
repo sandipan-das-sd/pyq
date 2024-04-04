@@ -8,6 +8,7 @@ const Login = () => {
     const [data, setData] = useState({
         email: "",
         password: "",
+        
     });
     const history = useHistory();
 	axios.defaults.withCredentials=true;
@@ -16,11 +17,13 @@ const Login = () => {
 		try {
 			const response = await axios.post('http://localhost:8001/login', data);
 			console.log(response.data);
-			if (response.data.Status === "Success") {
-				if (response.data.userType === "Admin") {
+			if (response.data.status === "Success") {
+				if (response.data.role === "admin") {
 					history.push('/admin');
-				} else {
+                    alert("You logged in as a Admin")
+				} if(response.data.role === "user") {
 					history.push('/');
+                    alert("You logged in as a User")
 				}
 			} else {
 				alert("Login failed. Please try again.");

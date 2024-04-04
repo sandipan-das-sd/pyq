@@ -10,7 +10,7 @@ const Signup = () => {
         email: "",
         password: "",
         confirmPassword: "",
-        userType: "visitor", // Default user type
+        userType: "",
     });
     const [error, setError] = useState("");
     const history = useHistory();
